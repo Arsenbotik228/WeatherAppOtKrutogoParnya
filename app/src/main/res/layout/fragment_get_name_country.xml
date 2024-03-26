@@ -1,4 +1,5 @@
-<LinearLayout android:background="@drawable/ed_text"
+<androidx.constraintlayout.widget.ConstraintLayout
+
     android:orientation="vertical"
     android:layout_margin="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -9,19 +10,37 @@
 
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="20dp"
+        android:id="@+id/ct_ed"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
         android:fontFamily="cursive"
         android:textStyle="bold"
-        android:backgroundTint="@color/green"
-        android:background="@drawable/item_bg"
-        android:id="@+id/ed_name_category"
         android:textSize="20sp"
         android:textColor="@color/black"
         android:hint="Name City"
         android:layout_width="match_parent"
         android:paddingLeft="40dp"
-        android:layout_height="60dp"/>
+        android:layout_height="60dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/et_search"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:id="@+id/btn_search"
+        android:text="Search"
+        android:backgroundTint="#00FFA6"
+        app:layout_constraintTop_toBottomOf="@id/ct_ed"
+        android:layout_marginTop="40dp"
 
 
 
-</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

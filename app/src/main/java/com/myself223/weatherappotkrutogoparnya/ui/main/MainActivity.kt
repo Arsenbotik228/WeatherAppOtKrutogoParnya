@@ -40,14 +40,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.liveData.observe(this) {
-            binding.tvTemp.text = it.current.tempC
-            showToast("${it.location.country}" )
-            binding.imgWeatherSunny.loadImage(it.current.condition.icon)
-            binding.btnLocation.setOnClickListener{
-                findNavController().navigate(R.id.getNameCountryFragment)
-            }
-
-
         }
     }
 }
